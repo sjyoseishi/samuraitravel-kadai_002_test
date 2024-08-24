@@ -1,0 +1,35 @@
+package com.example.samuraitravel.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.samuraitravel.repository.HouseRepository;
+import com.example.samuraitravel.repository.ReviewRepository;
+import com.example.samuraitravel.repository.UserRepository;
+import org.springframework.transaction.annotation.Transactional;
+import com.example.samuraitravel.form.EditForm;
+import com.example.samuraitravel.entity.Review;
+
+@Service
+public class ReviewService {
+
+	private final ReviewRepository reviewRepository;
+	private final HouseRepository houseRepository;
+	private final UserRepository userRepository;
+
+	public ReviewService(ReviewRepository reviewRepository, HouseRepository houseRepository,
+			UserRepository userRepository) {
+		this.reviewRepository = reviewRepository;
+		this.houseRepository = houseRepository;
+		this.userRepository = userRepository;
+	}
+
+	//レビューの更新
+	@Transactional
+	public void update(EditForm EditForm) {
+		Review review = reviewRepository.getReferenceById(EditForm.getId());
+		review.setStar(EditForm.getStar());
+		review.setReview(EditForm.getReview());
+		reviewRepository.save(review);
+	}
+
+}
