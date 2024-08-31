@@ -9,4 +9,5 @@
     <fullyQualifiedTypeName name="com.example.samuraitravel.entity.Review"/>
     <fullyQualifiedTypeName name="com.example.samuraitravel.repository.ReviewRepository"/>
     <fullyQualifiedTypeName name="com.stripe.model.Review"/>
+    <fullyQualifiedTypeName name="com.example.samuraitravel.entity.User"/>
 </qualifiedTypeNameHistroy>
