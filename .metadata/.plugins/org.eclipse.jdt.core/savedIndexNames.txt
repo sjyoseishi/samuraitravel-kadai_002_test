@@ -47,7 +47,6 @@ INDEX VERSION 1.134+D:\kadai_002\kadai_002\samuraitravel\.metadata\.plugins\org.
 3578380436.index
 3964552033.index
 3504017932.index
-2740915860.index
 195913544.index
 3813375013.index
 1904337177.index
